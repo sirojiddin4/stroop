@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Instructions for Phase 1</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Instructions for Phase 1</h1>
+        <p>Here are some instructions for Phase 1...</p>
+        <a class="button" href="{% url 'stroop_test_phase1' %}">Start Phase 1</a>
+    </div>
+</body>
+</html>

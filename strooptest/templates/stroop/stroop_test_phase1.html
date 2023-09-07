@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stroop Test Phase 1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #test-area {
+            text-align: center;
+        }
+        p {
+            font-weight: bold;
+            font-size: 48px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="test-area">
+        <p style="color:{{ display_color|lower }}">{{ text }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="response" value="Red">Red</button>
+            <button type="submit" name="response" value="Blue">Blue</button>
+            <button type="submit" name="response" value="Green">Green</button>
+            <button type="submit" name="response" value="Yellow">Yellow</button>
+            <button type="submit" name="response" value="Orange">Orange</button>
+            <button type="submit" name="response" value="Purple">Purple</button>
+            <button type="submit" name="response" value="Black">Black</button>
+        </form>
+    </div>
+
+</body>
+</html>
