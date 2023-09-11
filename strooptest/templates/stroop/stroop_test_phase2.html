@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Stroop Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag for responsiveness -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,33 +13,49 @@
             height: 100vh;
             margin: 0;
         }
+
         #test-area {
             text-align: center;
         }
+
         p {
             font-weight: bold;
-            font-size: 48px;
+            font-size: 3rem; /* Adjusted for mobile readability */
         }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Horizontally center buttons */
+            max-width: 500px; /* Max width to ensure proper layout */
+            margin: 0 auto; /* Centering the form on wider screens */
+        }
+
         button {
             background-color: #007BFF;
             color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
+            padding: 20px 24px; /* Increased padding for better touch targets */
+            margin: 8px 8px; /* Even margin all around */
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 18px;
-            margin-right: 10px;
+            font-size: 24px; /* Increased font size for readability */
+            flex: 1; /* Flexbox stretch */
+            max-width: 48%; /* Ensure two buttons side by side */
         }
+
         button:hover {
             background-color: #0056b3;
         }
+
     </style>
 </head>
+
 <body>
 
     <div id="test-area">
-        <p style="color:{{ display_color|lower }}">{{ text }}</p>
+        <p style="color:{{ display_color|lower }}">{{ text }} </p>
+        <p>{{ task }} </p>
         <form id="stroop-form" method="post">
             {% csrf_token %}
             <input type="hidden" name="elapsed_time" id="elapsed_time">
@@ -61,4 +79,5 @@
     </script>
 
 </body>
+
 </html>

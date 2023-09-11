@@ -3,11 +3,67 @@
 {% load static %}
 <head>
     <title>Instructions for Phase 2</title>
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Using Roboto font from Google Fonts */
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 18px; /* Increased the base font size */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em; /* Increased the header size */
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px; /* Added margin to create more space between paragraphs */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <h1>Instructions for Phase 2</h1>
-        <p>Here are some instructions for Phase 2...</p>
+        <p>This phase is a bit trickier. Again, you'll see a color word displayed in a specific color.
+            Depending on the task, you'll either:
+            - Select the color of the word's text.
+            - Select the meaning of the word.
+            The task will tell you which one to choose. Act as quickly and accurately as possible. Good luck!
+        </p>
+        <p>
+            Ushbu bosqichda siz ma'lum rangda ko'rsatilgan rang so'zini ko'rasiz. 
+            Agar so'z tagida C harfi bo'lsa so'zning ma'nosiga qaramasdan, so'z matnining rangini tanlang. 
+            Masalan, agar siz "KO'K" so'zini qizil rangda ko'rsangiz, "QIZIL" ni tanlashingiz kerak.
+            So'z matnining rangiga mos keladigan tugmani imkon qadar tez bosing. Chunki vaqt chegaralangan. 
+            Agar W harfi turgan bo'lsa, unda so'z matniga mos matnni tanlang. Masalan 'BLACK' W 'BLACK' tugmasini bosing. 
+            Omadingizni tilaymiz!
+        </p>
         <a class="button" href="{% url 'stroop_test_phase2' %}">Start Phase 2</a>
     </div>
 </body>
